@@ -28,9 +28,13 @@ To display blog feeds
 eg: if you are showing all your post contents then:
 
 <?php
+
 foreach($model as $row){
-  echo '<p>'.$row->title.'<br>'.$row->post;
+
+  echo $row->title.$row->post;
+  
   $this->widget('likedislike.widgets.LikeDislikeButton',array('field_id'=>$row->id));
-  echo '</p>';
+  
 }
+
 ?>
